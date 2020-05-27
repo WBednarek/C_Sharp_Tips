@@ -3,7 +3,7 @@ private List<string> _locations = new List<string>(); //_locations  are somwhere
 executeTextBox.Clear(); // out TextBox
 
 //First option, no string configuration availivility
-//executeTextBox.Text = String.Join(Environment.NewLine, _locations); //Firs
+executeTextBox.Text = String.Join(Environment.NewLine, _locations); //Firs
 
 foreach (var location in _locations)
 {
