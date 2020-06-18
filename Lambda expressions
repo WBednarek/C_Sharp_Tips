@@ -1,0 +1,33 @@
+using System;
+
+namespace FirstLearn
+{
+    class Program
+    {
+        delegate int powerDelegate(int baseToPower, int power);
+
+        //Lambda expression
+        static int multiplySquare(powerDelegate pow)
+        {
+            return pow(2, 10);
+        }
+
+        static void Main(string[] args)
+        {
+
+            int checkLambdaexpr = multiplySquare((baseToPower, power) =>
+            {
+                int result = 1;
+                for (int i = 0; i < power; ++i)
+                {
+                    result *= baseToPower;
+                }
+                return result;
+            });
+
+            Console.WriteLine("My first lambda expression result: " + checkLambdaexpr);
+        }
+
+
+    }
+}
